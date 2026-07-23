@@ -448,10 +448,20 @@ footer{padding:64px 0 48px;border-top:1px solid var(--line);background:var(--bg-
   .foot-grid{grid-template-columns:1fr}
   .hero h1{font-size:clamp(2.5rem,11vw,3.4rem)}
 }
+/* keep the mobile header uncluttered so the menu button always fits */
+@media (max-width:680px){
+  .nav-in{gap:12px}
+  .nav-right{gap:.5rem}
+  .nav-right .btn-primary{display:none}
+}
+@media (max-width:360px){
+  .brand .wordmark span{display:none}
+}
 /* mobile menu */
-.mobile-menu{position:fixed;inset:0;z-index:70;background:var(--bg);transform:translateY(-100%);transition:transform .45s var(--ease);
-  display:flex;flex-direction:column;padding:24px clamp(20px,5vw,56px)}
-.mobile-menu.open{transform:none}
+.mobile-menu{position:fixed;inset:0;z-index:80;background:var(--bg);transform:translateY(-100%);visibility:hidden;
+  transition:transform .45s var(--ease),visibility 0s linear .45s;
+  display:flex;flex-direction:column;padding:20px clamp(20px,5vw,56px) 28px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.mobile-menu.open{transform:none;visibility:visible;transition:transform .45s var(--ease)}
 .mobile-menu .mtop{display:flex;justify-content:space-between;align-items:center;height:48px}
 .mobile-menu nav{margin-top:36px;display:flex;flex-direction:column;gap:4px}
 .mobile-menu nav a{font-family:'Fraunces',serif;font-size:1.9rem;font-weight:420;padding:10px 0;border-bottom:1px solid var(--line);font-variation-settings:'opsz' 40}
