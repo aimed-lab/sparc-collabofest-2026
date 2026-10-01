@@ -104,6 +104,8 @@ img{max-width:100%;display:block}
 .btn-primary:hover{background:var(--pine-2)}
 .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
 .btn-ghost:hover{border-color:var(--pine);color:var(--pine)}
+.closed-chip{display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);background:color-mix(in srgb,var(--copper) 9%,transparent);border:1px solid color-mix(in srgb,var(--copper) 30%,transparent);padding:7px 13px;border-radius:999px}
+.closed-chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--copper)}
 .btn-copper{background:var(--copper);color:var(--copper-ink)}
 .btn-copper:hover{filter:brightness(1.06)}
 .btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
@@ -507,7 +509,7 @@ footer{padding:64px 0 48px;border-top:1px solid var(--line);background:var(--bg-
 @media (max-width:680px){
   .nav-in{gap:12px}
   .nav-right{gap:.5rem}
-  .nav-right .btn-primary{display:none}
+  .nav-right .btn{display:none}
 }
 @media (max-width:360px){
   .brand .wordmark span{display:none}
@@ -550,7 +552,7 @@ footer{padding:64px 0 48px;border-top:1px solid var(--line);background:var(--bg-
       <button class="theme-toggle" id="themeBtn" aria-label="Toggle color theme" title="Toggle theme">
         <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
       </button>
-      <a class="btn btn-primary" href="https://uab.co1.qualtrics.com/jfe/form/SV_cVnlmrmShnzME86" target="_blank" rel="noopener">Register <span class="arw">→</span></a>
+      <a class="btn btn-ghost" href="#timeline">Submissions closed <span class="arw">→</span></a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
       </button>
@@ -578,8 +580,8 @@ footer{padding:64px 0 48px;border-top:1px solid var(--line);background:var(--bg-
     <a href="#faq">FAQ</a>
   </nav>
   <div class="mcta">
-    <a class="btn btn-primary" href="https://uab.co1.qualtrics.com/jfe/form/SV_cVnlmrmShnzME86" target="_blank" rel="noopener" style="justify-content:center">Register <span class="arw">→</span></a>
-    <a class="btn btn-ghost" href="https://www.smartdrugdiscovery.org/collabofest" target="_blank" rel="noopener" style="justify-content:center">Start application</a>
+    <span class="closed-chip" style="justify-content:center">Submissions closed · Sep 30, 2026</span>
+    <a class="btn btn-primary" href="#timeline" style="justify-content:center">What's next <span class="arw">→</span></a>
     <a class="btn btn-ghost" href="docs/SPARC-CollaboFest-2026-RFA.pdf" target="_blank" rel="noopener" style="justify-content:center">Download the RFA</a>
   </div>
 </div>
@@ -593,11 +595,12 @@ footer{padding:64px 0 48px;border-top:1px solid var(--line);background:var(--bg-
       <span class="eyebrow"><span class="dot"></span>SPARC Drug Discovery CollaboFest · 2026</span>
       <h1>Turn a biomedical <em>insight</em> into a testable <span class="cop">therapeutic</span> strategy.</h1>
       <p class="hero-lead">The <a href="https://sites.uab.edu/sparc/" target="_blank" rel="noopener" class="lead-link">UAB Systems Pharmacology AI Research Center (SPARC)</a> invites multidisciplinary teams to move a promising idea from mechanism toward an experimentally testable therapy. <b>Three teams each receive up to $40,000 in combined SPARC and Southern Research services</b> — AI design and wet-lab support, plus $1,000 in prize money.</p>
+      <div class="closed-chip" style="margin:6px 0 20px">Submissions closed · Sep 30, 2026</div>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://uab.co1.qualtrics.com/jfe/form/SV_cVnlmrmShnzME86" target="_blank" rel="noopener">Register <span class="arw">→</span></a>
-        <a class="btn btn-ghost" href="https://www.smartdrugdiscovery.org/collabofest" target="_blank" rel="noopener">Start application</a>
+        <a class="btn btn-primary" href="#timeline">What's next <span class="arw">→</span></a>
+        <a class="btn btn-ghost" href="#updates">Read the latest update</a>
       </div>
-      <div class="hero-note"><span class="pip"></span>Info session held Jul 31 · <a href="https://uab.zoom.us/rec/play/9_NIQaX_8ChHkc9FSvSPBHvWPPswDmX80OK8XW5l53sZwiox-FUmCabyDQW6oH2mAtHvPle2gYYmioAT.WOdbV_UK7L49Rjzt?accessLevel=meeting&amp;canPlayFromShare=true&amp;from=share_recording_detail&amp;continueMode=true&amp;oldStyle=true&amp;componentName=rec-play&amp;originRequestUrl=https%3A%2F%2Fuab.zoom.us%2Frec%2Fshare%2FHQJX66WBjvNba0wWWFOtypsC6ymfTrkgZ3YwW8duo_NPGR1XPylowzQwHzMR94l9.G4AuPRJnuL2oakD8" target="_blank" rel="noopener" class="note-link">Watch the recording</a> · Submissions close Sep 30</div>
+      <div class="hero-note"><span class="pip"></span>In review · winners by Oct 20 · <a href="https://uab.zoom.us/rec/play/9_NIQaX_8ChHkc9FSvSPBHvWPPswDmX80OK8XW5l53sZwiox-FUmCabyDQW6oH2mAtHvPle2gYYmioAT.WOdbV_UK7L49Rjzt?accessLevel=meeting&amp;canPlayFromShare=true&amp;from=share_recording_detail&amp;continueMode=true&amp;oldStyle=true&amp;componentName=rec-play&amp;originRequestUrl=https%3A%2F%2Fuab.zoom.us%2Frec%2Fshare%2FHQJX66WBjvNba0wWWFOtypsC6ymfTrkgZ3YwW8duo_NPGR1XPylowzQwHzMR94l9.G4AuPRJnuL2oakD8" target="_blank" rel="noopener" class="note-link">Watch the info session recording</a></div>
     </div>
 
     <aside class="award-card reveal" aria-label="Award summary">
@@ -613,10 +616,10 @@ footer{padding:64px 0 48px;border-top:1px solid var(--line);background:var(--bg-
       </div>
       <div class="award-rows">
         <div class="arow"><span class="lab">Info session</span><span class="val">Jul 31, 2026<small>10:00 AM CT · Zoom</small></span></div>
-        <div class="arow"><span class="lab">Submission deadline</span><span class="val">Sep 30, 2026<small><span class="count" id="cd">—</span> remaining</small></span></div>
+        <div class="arow"><span class="lab">Submissions</span><span class="val">Closed<small>Sep 30, 2026</small></span></div>
+        <div class="arow"><span class="lab">Now</span><span class="val">In review<small>Agent-assisted &amp; panel</small></span></div>
         <div class="arow"><span class="lab">Winners announced</span><span class="val">by Oct 20, 2026</span></div>
         <div class="arow"><span class="lab">Prize money</span><span class="val">$1,000 / team<small>Institute for Biomedical Innovation</small></span></div>
-        <div class="arow"><span class="lab">Proposal</span><span class="val">3 pages<small>Submitted via portal</small></span></div>
       </div>
       <div class="award-foot">
         <span class="t">Eligibility</span>
@@ -630,7 +633,7 @@ footer{padding:64px 0 48px;border-top:1px solid var(--line);background:var(--bg-
 <section class="docbar" aria-label="Download the application documents">
   <div class="wrap docbar-in">
     <div class="docbar-lead">
-      <span class="eyebrow pine"><span class="dot"></span>Before you apply</span>
+      <span class="eyebrow pine"><span class="dot"></span>Program documents</span>
       <h3>Read the RFA &amp; guides</h3>
       <p>Full brief, service menu, and readiness checklist — download or print.</p>
     </div>
@@ -685,7 +688,7 @@ footer{padding:64px 0 48px;border-top:1px solid var(--line);background:var(--bg-
     <div class="sec-head reveal">
       <span class="eyebrow pine"><span class="dot"></span>The Challenge</span>
       <h2>From biological insight to an asset you can validate.</h2>
-      <p>CollaboFest is designed to move promising research — a mechanism, a clinical observation, an accessible dataset — toward an experimentally testable therapeutic solution, generating pilot evidence for grants, publications, partnerships, and potential UAB intellectual property. Teams submit a concise three-page proposal through the CollaboFest portal.</p>
+      <p>CollaboFest is designed to move promising research — a mechanism, a clinical observation, an accessible dataset — toward an experimentally testable therapeutic solution, generating pilot evidence for grants, publications, partnerships, and potential UAB intellectual property. Teams submitted a concise three-page proposal through the CollaboFest portal — submissions are now closed.</p>
     </div>
     <div class="steps reveal">
       <div class="step">
@@ -722,8 +725,8 @@ footer{padding:64px 0 48px;border-top:1px solid var(--line);background:var(--bg-
         <iframe title="The CollaboFest podcast episode on Spotify" src="https://open.spotify.com/embed/episode/1Q6ecufVxAbuxxfEhQpnnc?utm_source=generator" width="100%" height="152" frameborder="0" loading="lazy" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
       </div>
       <div class="watch-cta">
-        <a class="btn btn-primary" href="https://uab.co1.qualtrics.com/jfe/form/SV_cVnlmrmShnzME86" target="_blank" rel="noopener">Register <span class="arw">→</span></a>
-        <a class="btn btn-ghost" href="https://www.smartdrugdiscovery.org/collabofest" target="_blank" rel="noopener">Start application</a>
+        <a class="btn btn-primary" href="#timeline">What's next <span class="arw">→</span></a>
+        <a class="btn btn-ghost" href="#organizers">Meet the judges</a>
       </div>
     </div>
     <div class="watch-media reveal">
@@ -978,12 +981,12 @@ footer{padding:64px 0 48px;border-top:1px solid var(--line);background:var(--bg-
         <div class="what"><h3>Form teams &amp; close gaps</h3><p>Use the Team Readiness Self-Checklist to recruit collaborators and secure data access and a validation owner before you submit.</p></div>
       </div>
       <div class="tl key">
-        <div class="when">Sep 30, 2026<small>Deadline</small></div>
-        <div class="what"><h3>Submissions close</h3><p>Three-page proposals are due. Complete and submit through your CollaboFest workspace; submission is required for all contestants.</p><a class="tl-btn" href="https://www.smartdrugdiscovery.org/collabofest" target="_blank" rel="noopener">Start application <span class="arw">→</span></a></div>
+        <div class="when">Sep 30, 2026<small>Closed</small></div>
+        <div class="what"><h3>Submissions closed</h3><p>The proposal portal is now closed — three-page proposals were due September 30, 2026. Thank you to every team that applied.</p></div>
       </div>
-      <div class="tl">
-        <div class="when">Oct<small>Review</small></div>
-        <div class="what"><h3>Agent-assisted &amp; panel review</h3><p>Automated analysis supports a judging panel drawn from SPARC and its co-sponsors.</p></div>
+      <div class="tl key">
+        <div class="when">Oct 2026<small>Now · in progress</small></div>
+        <div class="what"><h3>Agent-assisted &amp; panel review</h3><p>Submitted proposals are now under review — automated analysis supports a judging panel drawn from SPARC and its co-sponsors.</p></div>
       </div>
       <div class="tl key">
         <div class="when">by Oct 20, 2026<small>Awards</small></div>
@@ -1196,12 +1199,11 @@ footer{padding:64px 0 48px;border-top:1px solid var(--line);background:var(--bg-
 <section id="apply">
   <div class="wrap">
     <div class="finalcta reveal">
-      <span class="eyebrow"><span class="dot"></span>Submissions close September 30, 2026</span>
-      <h2>Bring the insight. We'll help build the strategy.</h2>
-      <p>In your CollaboFest workspace, create your project, add team members, link your Box folder, complete the readiness checklist, and submit your three-page proposal.</p>
+      <div class="closed-chip" style="margin:0 auto 18px">Submissions closed · September 30, 2026</div>
+      <h2>Submissions are closed. Thank you.</h2>
+      <p>The proposal portal is now closed. Submitted proposals are under agent-assisted and panel review — <b>winners will be announced by October 20, 2026</b>. All participating teams will be invited to present at the AI Drug Discovery session of ATTIS in spring 2027.</p>
       <div class="fbtns">
-        <a class="btn btn-primary" href="https://uab.co1.qualtrics.com/jfe/form/SV_cVnlmrmShnzME86" target="_blank" rel="noopener">Register <span class="arw">→</span></a>
-        <a class="btn btn-ghost" href="https://www.smartdrugdiscovery.org/collabofest" target="_blank" rel="noopener">Start application</a>
+        <a class="btn btn-primary" href="#timeline">See the full timeline <span class="arw">→</span></a>
         <a class="btn btn-ghost" href="https://uab.zoom.us/rec/play/9_NIQaX_8ChHkc9FSvSPBHvWPPswDmX80OK8XW5l53sZwiox-FUmCabyDQW6oH2mAtHvPle2gYYmioAT.WOdbV_UK7L49Rjzt?accessLevel=meeting&amp;canPlayFromShare=true&amp;from=share_recording_detail&amp;continueMode=true&amp;oldStyle=true&amp;componentName=rec-play&amp;originRequestUrl=https%3A%2F%2Fuab.zoom.us%2Frec%2Fshare%2FHQJX66WBjvNba0wWWFOtypsC6ymfTrkgZ3YwW8duo_NPGR1XPylowzQwHzMR94l9.G4AuPRJnuL2oakD8" target="_blank" rel="noopener">Watch the info session recording</a>
       </div>
       <div class="contact">Questions? Contact Dr. Jake Y. Chen · <a href="mailto:jakechen@uab.edu">jakechen@uab.edu</a> · <a href="https://sites.uab.edu/sparc/" target="_blank" rel="noopener">sites.uab.edu/sparc</a></div>
@@ -1234,16 +1236,15 @@ footer{padding:64px 0 48px;border-top:1px solid var(--line);background:var(--bg-
         <a href="#organizers">Organizers &amp; judges</a>
       </div>
       <div class="foot-col">
-        <h4>Apply</h4>
+        <h4>Details</h4>
         <a href="#eligibility">Eligibility</a>
         <a href="#proposal">Proposal guide</a>
         <a href="#prepare">Readiness checklist</a>
         <a href="#faq">FAQ</a>
       </div>
       <div class="foot-col">
-        <h4>Take part</h4>
-        <a href="https://uab.co1.qualtrics.com/jfe/form/SV_cVnlmrmShnzME86" target="_blank" rel="noopener">Register ↗</a>
-        <a href="https://www.smartdrugdiscovery.org/collabofest" target="_blank" rel="noopener">Start application ↗</a>
+        <h4>Resources</h4>
+        <a href="#timeline">What's next ↗</a>
         <a href="docs/SPARC-CollaboFest-2026-RFA.pdf" target="_blank" rel="noopener">Download the RFA ↗</a>
         <a href="https://uab.zoom.us/rec/play/9_NIQaX_8ChHkc9FSvSPBHvWPPswDmX80OK8XW5l53sZwiox-FUmCabyDQW6oH2mAtHvPle2gYYmioAT.WOdbV_UK7L49Rjzt?accessLevel=meeting&amp;canPlayFromShare=true&amp;from=share_recording_detail&amp;continueMode=true&amp;oldStyle=true&amp;componentName=rec-play&amp;originRequestUrl=https%3A%2F%2Fuab.zoom.us%2Frec%2Fshare%2FHQJX66WBjvNba0wWWFOtypsC6ymfTrkgZ3YwW8duo_NPGR1XPylowzQwHzMR94l9.G4AuPRJnuL2oakD8" target="_blank" rel="noopener">Info session recording ↗</a>
         <a href="docs/SPARC-CollaboFest-Info-Session-Slides.pptx" target="_blank" rel="noopener">Info session slides (PPT) ↗</a>
@@ -1292,15 +1293,6 @@ footer{padding:64px 0 48px;border-top:1px solid var(--line);background:var(--bg-
   document.getElementById('navToggle').addEventListener('click', function(){ mm.classList.add('open'); });
   document.getElementById('mClose').addEventListener('click', function(){ mm.classList.remove('open'); });
   mm.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ mm.classList.remove('open'); }); });
-
-  /* ---- countdown ---- */
-  var cd = document.getElementById('cd');
-  function tick(){
-    var end = new Date('2026-09-30T23:59:59-05:00').getTime();
-    var d = Math.max(0, Math.floor((end - Date.now())/86400000));
-    if(cd) cd.textContent = d + (d===1?' day':' days');
-  }
-  tick(); setInterval(tick, 3600000);
 
   /* ---- reveal on scroll ---- */
   if('IntersectionObserver' in window && !reduce){
