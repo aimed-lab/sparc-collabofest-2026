@@ -18,7 +18,7 @@ Hero with live award summary + deadline countdown · the challenge (3-step proce
 
 ## Key facts baked in (per the revised RFA)
 - **Submission deadline: September 30, 2026** (updated)
-- **Winners announced: by October 20, 2026** (updated)
+- **Winners announced: November 13, 2026** (moved from Oct 20; winners contacted beforehand)
 - Info session: July 30, 2026, 10:00 AM CT (Zoom)
 - Three teams × up to $20,000 in in-kind SPARC services (not cash)
 - Eligibility: ≥1 co-investigator from UAB or the UAB-led CCTS Partner Network
