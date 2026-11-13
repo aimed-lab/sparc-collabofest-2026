@@ -18,7 +18,8 @@ Hero with live award summary + deadline countdown · the challenge (3-step proce
 
 ## Key facts baked in (per the revised RFA)
 - **Submission deadline: September 30, 2026** (updated)
-- **Winners announced: November 13, 2026** (moved from Oct 20; winners contacted beforehand)
+- **Winners announced: November 13, 2026** — 3 teams selected from 8 proposals (`#winners` section): Dr. James Kobie (UAB), Dr. Tony Merriman (UAB), Dr. Giulia Monticone (LSU Health Sciences Center, New Orleans) — unranked, listed alphabetically
+- Computational work (SPARC): late 2026 · Laboratory work (Southern Research): Q1 2027
 - Info session: July 30, 2026, 10:00 AM CT (Zoom)
 - Three teams × up to $20,000 in in-kind SPARC services (not cash)
 - Eligibility: ≥1 co-investigator from UAB or the UAB-led CCTS Partner Network
